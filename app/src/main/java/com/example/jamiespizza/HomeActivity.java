@@ -13,6 +13,8 @@ public class HomeActivity extends AppCompatActivity {
 
     private Button logout;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,9 +27,10 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Paper.book().destroy();
-                
+
                 Intent intent = new Intent(HomeActivity.this, MainActivity.class);
                 startActivity(intent);
+
             }
         });
 
