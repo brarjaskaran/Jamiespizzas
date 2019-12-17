@@ -14,7 +14,6 @@ public class HomeActivity extends AppCompatActivity {
     private Button logout;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
