@@ -48,7 +48,6 @@ public class RegisterActivity extends AppCompatActivity {
                 CreateAccount();
             }
         });
-        
 
     }
 
