@@ -10,8 +10,9 @@ import android.widget.ImageView;
 
 public class AdminCategoryActivity extends AppCompatActivity {
 
-    private ImageView traditional_pizza, gourment_pizza, pasta, burger;
-    private ImageView  salads, ribs_n_wings, deserts, milkshakes;
+    private ImageView traditional_pizza, gourment_pizza, pasta;
+    private ImageView  burger, salads, ribs_n_wings;
+    private ImageView deserts, milkshakes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +22,11 @@ public class AdminCategoryActivity extends AppCompatActivity {
         traditional_pizza = findViewById(R.id.traditional_pizza_id);
         gourment_pizza = findViewById(R.id.gourmet_pizza_id);
         pasta = findViewById(R.id.pastas_id);
-        burger = findViewById(R.id.burgers_id);
 
+        burger = findViewById(R.id.burgers_id);
         salads = findViewById(R.id.salads_id);
         ribs_n_wings = findViewById(R.id.ribs_n_wings_id);
+
         deserts = findViewById(R.id.deserts_id);
         milkshakes = findViewById(R.id.milkshakes_id);
 
