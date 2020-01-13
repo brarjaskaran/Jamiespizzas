@@ -11,16 +11,43 @@
     tools:context=".HomeActivity">
 
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/toolbar"
+
+            android:src="@drawable/nav_cart"
+            android:foregroundGravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:tint="#fff" />
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            app:title="Title"
+            app:titleMarginStart="140dp"
+            app:titleTextColor="@android:color/white"
+            android:layout_height="wrap_content"
             android:background="@color/c1"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/recycler_menu"
+            android:layout_below="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
 
 
 
@@ -35,6 +62,7 @@
         android:background="@color/c3"
         android:layout_gravity="start"
         app:itemTextColor="#fff"/>
+
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

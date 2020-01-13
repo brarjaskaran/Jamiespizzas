@@ -52,6 +52,7 @@ public class LoginActivity extends AppCompatActivity {
         loadingBar = new ProgressDialog(this);
 
         checkboxRememberMe = findViewById(R.id.remember_me_checkbox);
+
         Paper.init(this);
 
 
@@ -149,7 +150,11 @@ public class LoginActivity extends AppCompatActivity {
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+
+                                Prevalent.currentOnlineUser = usersData;
                                 startActivity(intent);
+
+
 
                             }
 
