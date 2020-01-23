@@ -81,7 +81,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         CircleImageView profileImageView = headerView.findViewById(R.id.user_profile_photo);
 
         userNameTextView.setText(Prevalent.currentOnlineUser.getName());
-
+        Picasso.get().load(Prevalent.currentOnlineUser.getImage()).placeholder(R.drawable.profile).into(profileImageView);
 
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -150,12 +150,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_settings:
                 Toast.makeText(HomeActivity.this, "Settings Selected", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+                startActivity(intent);
                 break;
             case R.id.logout:
 
                 Paper.book().destroy();
 
-                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                intent = new Intent(HomeActivity.this, MainActivity.class);
                 startActivity(intent);
 
                 Toast.makeText(HomeActivity.this, "Logout Selected", Toast.LENGTH_SHORT).show();
