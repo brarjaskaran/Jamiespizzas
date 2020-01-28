@@ -88,8 +88,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+                startActivity(intent);
+
             }
         });
 
@@ -150,6 +151,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
             case R.id.nav_cart:
+                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+                startActivity(intent);
                 Toast.makeText(HomeActivity.this, "Cart Selected", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_orders:
@@ -160,7 +163,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_settings:
                 Toast.makeText(HomeActivity.this, "Settings Selected", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+                intent = new Intent(HomeActivity.this, SettingsActivity.class);
                 startActivity(intent);
                 break;
             case R.id.logout:
