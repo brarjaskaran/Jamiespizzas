@@ -47,6 +47,8 @@ dependencies {
     //crop image aurther dependency
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
 
+    //Product Increment counter
+    implementation 'com.cepheuen.elegant-number-button:lib:1.0.1'
 
 }
 
