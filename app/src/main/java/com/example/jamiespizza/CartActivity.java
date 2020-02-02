@@ -95,7 +95,7 @@ public class CartActivity extends AppCompatActivity {
                 cartViewHolder.txtProductQuantity.setText("Quantity " + cart.getQuantity());
                 cartViewHolder.txtProductPrice.setText("Price $"+cart.getPrice());
 
-                int oneTypeProductTPrice = ((Integer.valueOf(cart.getPrice()))) * Integer.valueOf(cart.getPrice());
+                int oneTypeProductTPrice = ((Integer.valueOf(cart.getQuantity()))) * Integer.valueOf(cart.getPrice());
                 overTotalPrice = overTotalPrice + oneTypeProductTPrice;
 
                 textTotalAmount.setText("Total Price = $"+ String.valueOf(overTotalPrice));
