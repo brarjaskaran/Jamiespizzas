@@ -155,7 +155,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 Toast.makeText(HomeActivity.this, "Cart Selected", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.nav_orders:
+            case R.id.nav_search:
+                intent = new Intent(HomeActivity.this, SearchProductsActivity.class);
+                startActivity(intent);
                 Toast.makeText(HomeActivity.this, "Orders Selected", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_categories:
