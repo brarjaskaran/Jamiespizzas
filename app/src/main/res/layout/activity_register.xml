@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000"
+    android:background="#ffffff"
     tools:context=".RegisterActivity">
 
 
     <ImageView
         android:id="@+id/register_applogo"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:src="@drawable/jamies_logo_black"
+        android:layout_width="318dp"
+        android:layout_height="280dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/jamies_logo_without_backgroud"
 
         />
 
@@ -91,7 +91,6 @@
         android:textColor="@android:color/white"
         android:text="Create Account"
         app:layout_constraintBottom_toBottomOf="parent" />
-
 
 
 

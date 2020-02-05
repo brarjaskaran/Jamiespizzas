@@ -15,7 +15,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
     private ImageView  burger, salads, ribs_n_wings;
     private ImageView deserts, milkshakes;
 
-    private Button logoutButton, checkorderButton;
+    private Button logoutButton, checkorderButton, maintainProductsButton;
 
 
     @Override
@@ -25,6 +25,19 @@ public class AdminCategoryActivity extends AppCompatActivity {
 
         logoutButton = findViewById(R.id.admin_logout_button);
         checkorderButton = findViewById(R.id.admin_check_orders_button);
+        maintainProductsButton = findViewById(R.id.maintain_button);
+
+        maintainProductsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(AdminCategoryActivity.this, HomeActivity.class);
+                intent.putExtra("Admin", "Admin");
+                startActivity(intent);
+
+            }
+        });
+
 
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override

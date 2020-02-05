@@ -37,7 +37,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class SettingsActivity extends AppCompatActivity {
 
     private CircleImageView profileImageView;
-    EditText fullNameEditText, userPhoneEditText, addressEditText;
+    private EditText fullNameEditText, userPhoneEditText, addressEditText;
     private TextView profileChangeTextBtn, closeTextBtn, saveTextButton;
 
     private Uri imageUri;

@@ -128,9 +128,21 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/maintain_button"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Maintain Products"
+        android:layout_above="@+id/admin_check_orders_button"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        />
+
+    <Button
         android:id="@+id/admin_check_orders_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="42dp"
         android:layout_margin="10dp"
         android:background="@color/colorPrimaryDark"
         android:text="Check New Orders"
@@ -142,7 +154,7 @@
     <Button
         android:id="@+id/admin_logout_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="42dp"
         android:layout_alignParentEnd="true"
         android:layout_margin="10dp"
         android:background="@color/colorPrimaryDark"
