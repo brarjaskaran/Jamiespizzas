@@ -101,8 +101,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
-                startActivity(intent);
+
+                if(!type.equals("Admin")){
+                    Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+                    startActivity(intent);
+
+                }
+
 
             }
         });
@@ -181,30 +186,55 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()){
             case R.id.nav_cart:
                 Intent intent = new Intent(HomeActivity.this, CartActivity.class);
-                startActivity(intent);
-                Toast.makeText(HomeActivity.this, "Cart Selected", Toast.LENGTH_SHORT).show();
+
+
+                if(!type.equals("Admin")){
+                    startActivity(intent);
+                    Toast.makeText(HomeActivity.this, "Cart Selected", Toast.LENGTH_SHORT).show();
+
+                }
+
                 break;
             case R.id.nav_search:
-                intent = new Intent(HomeActivity.this, SearchProductsActivity.class);
-                startActivity(intent);
-                Toast.makeText(HomeActivity.this, "Orders Selected", Toast.LENGTH_SHORT).show();
+                if(!type.equals("Admin")){
+                    intent = new Intent(HomeActivity.this, SearchProductsActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(HomeActivity.this, "Orders Selected", Toast.LENGTH_SHORT).show();
+
+
+                }
+
                 break;
             case R.id.nav_categories:
-                Toast.makeText(HomeActivity.this, "Categories Selected", Toast.LENGTH_SHORT).show();
+                if(!type.equals("Admin")){
+                    Toast.makeText(HomeActivity.this, "Categories Selected", Toast.LENGTH_SHORT).show();
+
+
+
+                }
                 break;
             case R.id.nav_settings:
-                Toast.makeText(HomeActivity.this, "Settings Selected", Toast.LENGTH_SHORT).show();
-                intent = new Intent(HomeActivity.this, SettingsActivity.class);
-                startActivity(intent);
+                if(!type.equals("Admin")){
+                    Toast.makeText(HomeActivity.this, "Settings Selected", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(HomeActivity.this, SettingsActivity.class);
+                    startActivity(intent);
+
+
+                }
+
                 break;
             case R.id.logout:
+                if(!type.equals("Admin")){
+                    Paper.book().destroy();
 
-                Paper.book().destroy();
+                    intent = new Intent(HomeActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
 
-                intent = new Intent(HomeActivity.this, MainActivity.class);
-                startActivity(intent);
+                    Toast.makeText(HomeActivity.this, "Logout Selected", Toast.LENGTH_SHORT).show();
+                }
 
-                Toast.makeText(HomeActivity.this, "Logout Selected", Toast.LENGTH_SHORT).show();
+
                 break;
             default:
                 break;

@@ -108,7 +108,7 @@
         android:id="@+id/admin_panel_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I'm am admin?"
+        android:text="I'm staff?"
         android:layout_alignParentEnd="true"
         android:textColor="@color/colorPrimary"
         android:textSize="17dp"
@@ -134,6 +134,17 @@
         android:textStyle="bold"
         android:layout_marginLeft="80dp"
         android:layout_marginStart="20dp"
+        android:visibility="invisible"
+
+        />
+    <TextView
+        android:id="@+id/owner_panel_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I am owner"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_margin="10dp"
         android:visibility="invisible"
 
         />

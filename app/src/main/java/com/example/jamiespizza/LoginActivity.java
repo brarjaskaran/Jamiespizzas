@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -22,6 +23,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.security.acl.Owner;
+
 import io.paperdb.Paper;
 
 public class LoginActivity extends AppCompatActivity {
@@ -29,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText InputNumber, InputPassword;
     private Button LoginButton;
     private ProgressDialog loadingBar;
-    private TextView AdminLink, NotAdminLink;
+    private TextView AdminLink, NotAdminLink, OwnerLink;
 
 
     private String parentDbName = "Users";
@@ -47,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         InputNumber = findViewById(R.id.login__phone_number_input);
         AdminLink = findViewById(R.id.admin_panel_link);
         NotAdminLink = findViewById(R.id.not_admin_panel_link);
+        OwnerLink = findViewById(R.id.owner_panel_link);
 
 
         loadingBar = new ProgressDialog(this);
@@ -70,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                 AdminLink.setVisibility(View.INVISIBLE);
                 NotAdminLink.setVisibility(View.VISIBLE);
                 parentDbName = "Admins";
+                OwnerLink.setVisibility(View.VISIBLE);
 
 
             }
@@ -86,7 +91,18 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        OwnerLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginButton.setText("Login Owner");
+                parentDbName = "Owner";
+
+            }
+        });
+
     }
+
+
 
     private void LoginUser() {
         String phone = InputNumber.getText().toString();
@@ -157,11 +173,19 @@ public class LoginActivity extends AppCompatActivity {
 
 
                             }
+                            else if (parentDbName.equals("Owner")){
+                                Toast.makeText(LoginActivity.this, "Welcome Owner", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+
+                                Intent intent = new Intent(LoginActivity.this, OwnerFirstActivity.class);
+                                startActivity(intent);
+                            }
 
                         }
                         else {
                             loadingBar.dismiss();
                             Toast.makeText(LoginActivity.this, "Password is incorrect", Toast.LENGTH_SHORT).show();
+
 
                         }
                     }
