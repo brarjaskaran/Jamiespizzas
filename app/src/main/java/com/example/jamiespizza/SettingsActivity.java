@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,7 +40,7 @@ public class SettingsActivity extends AppCompatActivity {
     private TextView profileChangeTextBtn, closeTextBtn, saveTextButton;
 
     private Uri imageUri;
-    private String myUri = "";
+    private String myUrl = "";
     private StorageTask uploadtask;
     StorageReference storageProfilePictureRef;
     private String checker = "";
@@ -174,14 +173,15 @@ public class SettingsActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Uri> task) {
                     if(task.isSuccessful()){
+
                         Uri downloadUrl = task.getResult();
-                        myUri = downloadUrl.toString();
+                        myUrl = downloadUrl.toString();
                         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users");
                         HashMap<String, Object> userMap = new HashMap<>();
                         userMap.put("name", fullNameEditText.getText().toString());
                         userMap.put("address", addressEditText.getText().toString());
                         userMap.put("phoneOrder", userPhoneEditText.getText().toString());
-                        userMap.put("image", myUri);
+                        userMap.put("image", myUrl);
                         ref.child(Prevalent.currentOnlineUser.getPhone()).updateChildren(userMap);
 
                         progressDialog.dismiss();
@@ -203,7 +203,7 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
-    private void userInfoDisplay(final CircleImageView profileImageView, final EditText fullNameEditText, final EditText userPhoneEditText, EditText addressEditText) {
+    private void userInfoDisplay(final CircleImageView profileImageView, final EditText fullNameEditText, final EditText userPhoneEditText, final EditText addressEditText) {
         DatabaseReference UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child(Prevalent.currentOnlineUser.getPhone());
 
         UsersRef.addValueEventListener(new ValueEventListener() {
@@ -220,6 +220,7 @@ public class SettingsActivity extends AppCompatActivity {
                         Picasso.get().load(image).into(profileImageView);
                         fullNameEditText.setText(name);
                         userPhoneEditText.setText(phone);
+                        addressEditText.setText(address);
                     }
                 }
 

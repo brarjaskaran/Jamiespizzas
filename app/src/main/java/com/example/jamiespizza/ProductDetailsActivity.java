@@ -43,6 +43,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details);
 
+        productID =getIntent().getStringExtra("pid");
+
 
         addToCartBtn = findViewById(R.id.pd_add_to_cart_button);
         numberButton = findViewById(R.id.number_btn);
