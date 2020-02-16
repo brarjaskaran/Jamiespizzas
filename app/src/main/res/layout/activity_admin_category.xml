@@ -18,106 +18,197 @@
         android:textStyle="bold"
         ></TextView>
 
-    <LinearLayout
-        android:id="@+id/linear1_category_layout"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/traditional_pizza_id"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/slogan_category"
-        android:orientation="horizontal"
+        android:text="Traditional Pizzas"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-
-        android:layout_marginTop="45dp">
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/traditional_pizza_id"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/traditional_pizzas"></ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Traditional Pizza"></TextView>
-        </FrameLayout>
-
-
-
-        <ImageView
-            android:id="@+id/gourmet_pizza_id"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/gourmet_pizzas"></ImageView>
-
-        <ImageView
-            android:id="@+id/pastas_id"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/pastas"></ImageView>
-
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linear2_category_layout"
-        android:layout_width="match_parent"
+        android:textColor="@color/colorPrimaryDark"/>
+    <TextView
+        android:id="@+id/gourmet_pizza_id"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linear1_category_layout"
-        android:orientation="horizontal"
+        android:layout_below="@+id/traditional_pizza_id"
+
+        android:text="Gourmet Pizzas"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="45dp">
+        android:textColor="@color/colorPrimaryDark"/>
 
-        <ImageView
-            android:id="@+id/burgers_id"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/burgers"></ImageView>
-
-        <ImageView
-            android:id="@+id/salads_id"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/salads"></ImageView>
-        <ImageView
-            android:id="@+id/ribs_n_wings_id"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ribs_n_wings"></ImageView>
-
-
-
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linear3_category_layout"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/pastas_id"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linear2_category_layout"
-        android:orientation="horizontal"
+        android:layout_below="@+id/gourmet_pizza_id"
+        android:text="Pastas"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="45dp">
+        android:textColor="@color/colorPrimaryDark"/>
 
-        <ImageView
-            android:id="@+id/deserts_id"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/desserts"></ImageView>
+    <TextView
+        android:id="@+id/burgers_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pastas_id"
 
-        <ImageView
-            android:id="@+id/milkshakes_id"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/milkshake"></ImageView>
+        android:text="Burgers"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:id="@+id/salads_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/burgers_id"
+
+        android:text="Salads"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:id="@+id/ribs_n_wings_id"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/salads_id"
+
+        android:text="Ribs and Wings"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"/>
+    <TextView
+        android:id="@+id/deserts_id"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ribs_n_wings_id"
+
+        android:text="Deserts"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"/>
+    <TextView
+        android:id="@+id/milkshakes_id"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deserts_id"
+
+        android:text="Milkshakes"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"/>
+
+
+
+
+    <!--    <LinearLayout-->
+<!--        android:id="@+id/linear1_category_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/slogan_category"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="45dp">-->
+
+<!--          -->
+<!--        -->
+<!--        <ImageView-->
+<!--            android:id="@+id/traditional_pizza_id"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:src="@drawable/traditional_pizzas"></ImageView>-->
+<!--      -->
+
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/gourmet_pizza_id"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:src="@drawable/gourmet_pizzas"></ImageView>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/pastas_id"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:src="@drawable/pastas"></ImageView>-->
+
+
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linear2_category_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/linear1_category_layout"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="45dp">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/burgers_id"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:src="@drawable/burgers"></ImageView>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/salads_id"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:src="@drawable/salads"></ImageView>-->
+<!--        <ImageView-->
+<!--            android:id="@+id/ribs_n_wings_id"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:src="@drawable/ribs_n_wings"></ImageView>-->
+
+
+
+
+
+
+<!--    </LinearLayout>-->
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linear3_category_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/linear2_category_layout"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="45dp">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/deserts_id"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:src="@drawable/desserts"></ImageView>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/milkshakes_id"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:src="@drawable/milkshake"></ImageView>-->
 
 
 
@@ -125,7 +216,7 @@
 
 
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
     <Button
         android:id="@+id/maintain_button"

@@ -62,12 +62,12 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(this, "Please Write Your name..", Toast.LENGTH_SHORT).show();
         }
 
-        else if (TextUtils.isEmpty(phone)){
-            Toast.makeText(this, "Please Write Your phone number..", Toast.LENGTH_SHORT).show();
+        else if (TextUtils.isEmpty(phone) || phone.length()>10 ||phone.length()<10){
+            Toast.makeText(this, "Please enter a valid phone number..", Toast.LENGTH_SHORT).show();
         }
 
-        else if (TextUtils.isEmpty(password)){
-            Toast.makeText(this, "Please Write Your password..", Toast.LENGTH_SHORT).show();
+        else if (TextUtils.isEmpty(password)||password.length()<8){
+            Toast.makeText(this, "Please Write Your password, password length should be greater than Eight", Toast.LENGTH_SHORT).show();
         }
         else{
             loadingBar.setTitle("Create Account");

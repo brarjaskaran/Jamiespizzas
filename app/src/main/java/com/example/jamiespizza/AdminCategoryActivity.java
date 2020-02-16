@@ -8,14 +8,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class AdminCategoryActivity extends AppCompatActivity {
 
-    private ImageView traditional_pizza, gourment_pizza, pasta;
-    private ImageView  burger, salads, ribs_n_wings;
-    private ImageView deserts, milkshakes;
-
+//    private ImageView traditional_pizza, gourment_pizza, pasta;
+//    private ImageView  burger, salads, ribs_n_wings;
+//    private ImageView deserts, milkshakes;
+//
     private Button logoutButton, checkorderButton, maintainProductsButton;
+
+    private TextView traditional_pizza, gourment_pizza, pasta, burger, salads, ribs_n_wings, deserts, milkshakes;
 
 
     @Override
