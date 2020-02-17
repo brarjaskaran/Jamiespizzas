@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/login_applogo"
-        android:layout_width="338dp"
-        android:layout_height="291dp"
+        android:layout_width="302dp"
+        android:layout_height="228dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@android:dimen/app_icon_size"
         android:src="@drawable/jamies_logo_without_backgroud" />
@@ -124,7 +124,7 @@
         android:id="@+id/not_admin_panel_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I'm not an admin?"
+        android:text="I'm not an staff?"
         android:layout_alignParentStart="true"
 
         android:textColor="@color/colorPrimary"
@@ -141,7 +141,7 @@
         android:id="@+id/owner_panel_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I am owner"
+        android:text="I am admin"
         android:layout_alignParentBottom="true"
         android:textColor="@color/colorPrimaryDark"
         android:layout_margin="10dp"

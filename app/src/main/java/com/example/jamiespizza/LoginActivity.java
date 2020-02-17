@@ -70,7 +70,8 @@ public class LoginActivity extends AppCompatActivity {
         AdminLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LoginButton.setText("Login Admin");
+                LoginButton.setText("Login Staff");
+                InputNumber.setHint("Staff ID");
                 AdminLink.setVisibility(View.INVISIBLE);
                 NotAdminLink.setVisibility(View.VISIBLE);
                 parentDbName = "Admins";
@@ -94,7 +95,8 @@ public class LoginActivity extends AppCompatActivity {
         OwnerLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LoginButton.setText("Login Owner");
+                LoginButton.setText("Login Admin");
+                InputNumber.setHint("Admin ID");
                 parentDbName = "Owner";
 
             }
