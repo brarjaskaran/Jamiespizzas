@@ -14,6 +14,7 @@
         android:icon="@drawable/orders"
         android:iconTint="@android:color/white" />
 
+
     <item
         android:id="@+id/nav_categories"
         android:title="Categories"
@@ -24,6 +25,13 @@
         android:title="Settings"
         android:icon="@drawable/settings"
         android:iconTint="@android:color/white"/>
+
+        <item
+            android:id="@+id/nav_contactus"
+            android:title="Contact Details"
+            android:icon="@drawable/about_icon_email"
+            android:iconTint="@android:color/white"
+            />
     <item
         android:id="@+id/logout"
         android:title="Logout"

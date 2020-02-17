@@ -63,7 +63,7 @@ public class SettingsActivity extends AppCompatActivity {
         profileChangeTextBtn = findViewById(R.id.profile_image_change_btn);
         closeTextBtn = findViewById(R.id.close_settings);
         saveTextButton = findViewById(R.id.update_account_settings);
-        securityQuestionBtn  = findViewById(R.id.security_questions_btn);
+//        securityQuestionBtn  = findViewById(R.id.security_questions_btn);
 
         userInfoDisplay(profileImageView,fullNameEditText,userPhoneEditText,addressEditText);
 

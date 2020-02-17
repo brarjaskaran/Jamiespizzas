@@ -50,6 +50,10 @@ dependencies {
     //Product Increment counter
     implementation 'com.cepheuen.elegant-number-button:lib:1.0.1'
 
+    //About us
+    implementation 'com.github.medyo:android-about-page:1.2.5'
+
+
 }
 
 apply plugin: 'com.google.gms.google-services'

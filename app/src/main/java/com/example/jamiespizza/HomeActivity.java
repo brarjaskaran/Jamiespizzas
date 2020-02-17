@@ -207,12 +207,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_categories:
                 if(!type.equals("Admin")){
+
+
+
                     Toast.makeText(HomeActivity.this, "Categories Selected", Toast.LENGTH_SHORT).show();
 
 
 
                 }
                 break;
+
+
+
             case R.id.nav_settings:
                 if(!type.equals("Admin")){
                     Toast.makeText(HomeActivity.this, "Settings Selected", Toast.LENGTH_SHORT).show();
@@ -223,6 +229,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 }
 
                 break;
+
+            case R.id.nav_contactus:
+                if(!type.equals("Admin")){
+                    intent = new Intent(HomeActivity.this, AboutUsActivity.class);
+                    startActivity(intent);
+
+
+                    Toast.makeText(HomeActivity.this, "Contact details Selected", Toast.LENGTH_SHORT).show();
+
+                }
+                break;
+
             case R.id.logout:
                 if(!type.equals("Admin")){
                     Paper.book().destroy();
