@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,7 @@ public class SettingsActivity extends AppCompatActivity {
     private CircleImageView profileImageView;
     private EditText fullNameEditText, userPhoneEditText, addressEditText;
     private TextView profileChangeTextBtn, closeTextBtn, saveTextButton;
+    private Button securityQuestionBtn;
 
     private Uri imageUri;
     private String myUrl = "";
@@ -61,6 +63,7 @@ public class SettingsActivity extends AppCompatActivity {
         profileChangeTextBtn = findViewById(R.id.profile_image_change_btn);
         closeTextBtn = findViewById(R.id.close_settings);
         saveTextButton = findViewById(R.id.update_account_settings);
+        securityQuestionBtn  = findViewById(R.id.security_questions_btn);
 
         userInfoDisplay(profileImageView,fullNameEditText,userPhoneEditText,addressEditText);
 

@@ -1,14 +1,16 @@
-package com.example.jamiespizza;
+package com.example.jamiespizza.Admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.jamiespizza.HomeActivity;
+import com.example.jamiespizza.MainActivity;
+import com.example.jamiespizza.R;
 
 public class AdminCategoryActivity extends AppCompatActivity {
 
@@ -79,7 +81,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
-                intent.putExtra("category", "Traditional Pizza");
+                intent.putExtra("category", "traditional Pizza");
                 startActivity(intent);
 
 
@@ -90,7 +92,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
-                intent.putExtra("category","Gourment Pizza");
+                intent.putExtra("category","gourment Pizza");
                 startActivity(intent);
 
             }
@@ -100,7 +102,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
-                intent.putExtra("category","Pasta");
+                intent.putExtra("category","pasta");
                 startActivity(intent);
 
             }
@@ -110,7 +112,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
-                intent.putExtra("category","Burger");
+                intent.putExtra("category","burger");
                 startActivity(intent);
 
 
@@ -121,7 +123,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
-                intent.putExtra("category","Salads");
+                intent.putExtra("category","salads");
                 startActivity(intent);
 
 
@@ -134,7 +136,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
-                intent.putExtra("category","Ribs n Wings");
+                intent.putExtra("category","ribs n wings");
                 startActivity(intent);
 
 
@@ -145,7 +147,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
-                intent.putExtra("category","Deserts");
+                intent.putExtra("category","deserts");
                 startActivity(intent);
 
             }
@@ -155,7 +157,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
-                intent.putExtra("category","Milkshakes");
+                intent.putExtra("category","milkshakes");
                 startActivity(intent);
 
             }

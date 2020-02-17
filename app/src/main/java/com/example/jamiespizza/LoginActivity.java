@@ -7,7 +7,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -15,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jamiespizza.Admin.AdminCategoryActivity;
 import com.example.jamiespizza.Model.Users;
 import com.example.jamiespizza.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
@@ -23,8 +23,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.security.acl.Owner;
-
 import io.paperdb.Paper;
 
 public class LoginActivity extends AppCompatActivity {
@@ -32,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText InputNumber, InputPassword;
     private Button LoginButton;
     private ProgressDialog loadingBar;
-    private TextView AdminLink, NotAdminLink, OwnerLink;
+    private TextView AdminLink, NotAdminLink, OwnerLink, ForgetPasswordLink;
 
 
     private String parentDbName = "Users";
@@ -51,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         AdminLink = findViewById(R.id.admin_panel_link);
         NotAdminLink = findViewById(R.id.not_admin_panel_link);
         OwnerLink = findViewById(R.id.owner_panel_link);
+        ForgetPasswordLink = findViewById(R.id.forget_password_link);
 
 
         loadingBar = new ProgressDialog(this);

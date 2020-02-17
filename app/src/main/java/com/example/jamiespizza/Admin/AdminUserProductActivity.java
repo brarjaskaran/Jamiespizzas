@@ -1,4 +1,4 @@
-package com.example.jamiespizza;
+package com.example.jamiespizza.Admin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.jamiespizza.Model.Cart;
+import com.example.jamiespizza.R;
 import com.example.jamiespizza.ViewHolder.CartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;

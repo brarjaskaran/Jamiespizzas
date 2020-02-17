@@ -1,4 +1,4 @@
-package com.example.jamiespizza;
+package com.example.jamiespizza.Admin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.jamiespizza.Model.AdminOrders;
+import com.example.jamiespizza.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
