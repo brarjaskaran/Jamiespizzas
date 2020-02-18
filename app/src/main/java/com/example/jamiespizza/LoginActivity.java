@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText InputNumber, InputPassword;
     private Button LoginButton;
     private ProgressDialog loadingBar;
-    private TextView AdminLink, NotAdminLink, OwnerLink, ForgetPasswordLink;
+    private TextView AdminLink, NotAdminLink,OwnerLink, ForgetPasswordLink;
 
 
     private String parentDbName = "Users";
@@ -48,8 +48,8 @@ public class LoginActivity extends AppCompatActivity {
         InputNumber = findViewById(R.id.login__phone_number_input);
         AdminLink = findViewById(R.id.admin_panel_link);
         NotAdminLink = findViewById(R.id.not_admin_panel_link);
-        OwnerLink = findViewById(R.id.owner_panel_link);
-        ForgetPasswordLink = findViewById(R.id.forget_password_link);
+//        OwnerLink = findViewById(R.id.owner_panel_link);
+//        ForgetPasswordLink = findViewById(R.id.forget_password_link);
 
 
         loadingBar = new ProgressDialog(this);
@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                 AdminLink.setVisibility(View.INVISIBLE);
                 NotAdminLink.setVisibility(View.VISIBLE);
                 parentDbName = "Admins";
-                OwnerLink.setVisibility(View.VISIBLE);
+//                OwnerLink.setVisibility(View.VISIBLE);
 
 
             }
@@ -91,15 +91,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        OwnerLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                LoginButton.setText("Login Admin");
-                InputNumber.setHint("Admin ID");
-                parentDbName = "Owner";
-
-            }
-        });
+//        OwnerLink.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                LoginButton.setText("Login Admin");
+//                InputNumber.setHint("Admin ID");
+//                parentDbName = "Owner";
+//
+//            }
+//        });
 
     }
 

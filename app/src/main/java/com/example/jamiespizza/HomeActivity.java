@@ -205,17 +205,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 }
 
                 break;
-            case R.id.nav_categories:
-                if(!type.equals("Admin")){
-
-
-
-                    Toast.makeText(HomeActivity.this, "Categories Selected", Toast.LENGTH_SHORT).show();
-
-
-
-                }
-                break;
+//            case R.id.nav_categories:
+//                if(!type.equals("Admin")){
+//
+//
+//
+//                    Toast.makeText(HomeActivity.this, "Categories Selected", Toast.LENGTH_SHORT).show();
+//
+//
+//
+//                }
+//                break;
 
 
 
